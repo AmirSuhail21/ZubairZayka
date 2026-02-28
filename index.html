@@ -4,169 +4,10 @@
 <title>Zubair Zayka</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="stylesheet" href="style.css">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-<style >
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background: linear-gradient(135deg,#1a1a1a,#2b0f0f);
-color:white;
-}
-
-/* HEADER */
-header{
-padding:20px 50px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(0,0,0,0.8);
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-header h1{
-color:#ff4d4d;
-}
-
-nav a{
-color:white;
-margin-left:20px;
-text-decoration:none;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#ff4d4d;
-}
-
-/* HERO */
-.hero{
-text-align:center;
-padding:80px 20px;
-background:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5') center/cover;
-}
-
-.hero h2{
-font-size:45px;
-background:rgba(0,0,0,0.6);
-display:inline-block;
-padding:15px 30px;
-border-radius:10px;
-}
-
-/* OWNER SECTION */
-.owner{
-text-align:center;
-margin:60px 0;
-}
-
-.owner img{
-width:260px;
-border-radius:20px;
-box-shadow:0 15px 35px rgba(0,0,0,0.7);
-transition:0.4s;
-}
-
-.owner img:hover{
-transform:scale(1.05);
-}
-
-/* MENU */
-.menu{
-padding:40px 20px 60px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:rgba(255,255,255,0.08);
-border-radius:15px;
-overflow:hidden;
-transition:0.4s;
-box-shadow:0 5px 15px rgba(0,0,0,0.5);
-}
-
-.card:hover{
-transform:translateY(-10px) scale(1.03);
-}
-
-.card img{
-width:100%;
-height:200px;
-object-fit:cover;
-cursor:pointer;
-}
-
-.card-content{
-padding:15px;
-}
-
-.card-content h3{
-color:#ff4d4d;
-margin-bottom:8px;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:20px;
-background:black;
-margin-top:40px;
-}
-
-footer a{
-display:inline-block;
-padding:12px 25px;
-border-radius:30px;
-text-decoration:none;
-font-weight:500;
-margin:10px;
-color:white;
-box-shadow:0 5px 15px rgba(0,0,0,0.4);
-transition:0.3s;
-}
-
-footer a:hover{
-transform:scale(1.08);
-}
-
-.whatsapp{
-background:#25D366;
-}
-
-.instagram{
-background:#E1306C;
-}
-.float-whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-font-size:28px;
-padding:15px;
-border-radius:50%;
-box-shadow:0 5px 20px rgba(0,0,0,0.5);
-z-index:999;
-transition:0.3s;
-}
-
-.float-whatsapp:hover{
-transform:scale(1.1);
-}
-nav i{
-margin-right:6px;
-}
-</style>
 </head>
 
 <body>
@@ -174,20 +15,10 @@ margin-right:6px;
 <header>
 <h1>Zubair Zayka 🍽</h1>
 <nav>
-    <div style="display:flex; gap:20px; align-items:center;">
-
-  <a href="#" style="color:white; text-decoration:none; display:flex; align-items:center; gap:5px;">
-    <i class="fas fa-home"></i> Home
-  </a>
-
-  <a href="tel:7251996501" style="color:white; text-decoration:none; display:flex; align-items:center; gap:5px;">
-    <i class="fas fa-phone"></i> Call
-  </a>
-
-  <a href="#" style="color:white; text-decoration:none; display:flex; align-items:center; gap:5px;">
-    <i class="fas fa-map-marker-alt"></i> Location
-  </a>
-
+<div class="nav-links">
+<a href="#"><i class="fas fa-home"></i> Home</a>
+<a href="tel:7251996501"><i class="fas fa-phone"></i> Call</a>
+<a href="https://maps.app.goo.gl/nEryjAz12GDnig5TA"><i class="fas fa-map-marker-alt"></i> Location</a>
 </div>
 </nav>
 </header>
@@ -196,165 +27,58 @@ margin-right:6px;
 <h2>Famous Special Barra 🔥</h2>
 </section>
 
-<!-- OWNER -->
 <div class="owner">
 <img src="amir.jpeg">
-<h3 style="margin-top:15px;">Owner - Zubair Khan</h3>
+<h3>Owner - Zubair Khan</h3>
 </div>
 
-<!-- MENU -->
-<section class="menu">
+<!-- MENU --> 
+<section class="menu"> 
+<div class="card"> <img src="https://cdn.uengage.io/uploads/45893/image-4565-1712169270.jpg" onclick="openImage(this.src)"> <div class="card-content"> <h3>Special Barra</h3> <p>Our signature special dish.</p> </div> </div>
 
-<div class="card">
-<img src="https://cdn.uengage.io/uploads/45893/image-4565-1712169270.jpg" onclick="openImage(this.src)">
-<div class="card-content">
-<h3>Special Barra</h3>
-<p>Our signature special dish.</p>
-</div>
-</div>
+<div class="card"> <img src="https://images.unsplash.com/photo-1708782344490-9026aaa5eec7?q=80&w=580" onclick="openImage(this.src)"> <div class="card-content"> <h3>Chicken Curry</h3> <p>Spicy & rich gravy curry.</p> </div> </div> 
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1708782344490-9026aaa5eec7?q=80&w=580" onclick="openImage(this.src)">
-<div class="card-content">
-<h3>Chicken Curry</h3>
-<p>Spicy & rich gravy curry.</p>
-</div>
-</div>
+<div class="card"> <img src="https://plus.unsplash.com/premium_photo-1695931841253-1e17e7ed59b5?q=80&w=1470" onclick="openImage(this.src)"> <div class="card-content"> <h3>Chicken Tandoori</h3> <p>Smoky roasted chicken.</p> </div> </div>
 
-<div class="card">
-<img src="https://plus.unsplash.com/premium_photo-1695931841253-1e17e7ed59b5?q=80&w=1470" onclick="openImage(this.src)">
-<div class="card-content">
-<h3>Chicken Tandoori</h3>
-<p>Smoky roasted chicken.</p>
-</div>
-</div>
+<div class="card"> <img src="https://cukkoosdeli.com/wp-content/uploads/2023/09/d815e816-4664-472e-990b-d880be41499f-chicken-biryani-recipe.jpg" onclick="openImage(this.src)"> <div class="card-content"> <h3>Chicken Biryani</h3> <p>Delicious layered biryani.</p> </div> </div> 
 
-<div class="card">
-<img src="https://cukkoosdeli.com/wp-content/uploads/2023/09/d815e816-4664-472e-990b-d880be41499f-chicken-biryani-recipe.jpg" onclick="openImage(this.src)">
-<div class="card-content">
-<h3>Chicken Biryani</h3>
-<p>Delicious layered biryani.</p>
-</div>
-</div>
+<div class="card"> <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=387" onclick="openImage(this.src)"> <div class="card-content"> <h3>Chicken Tikka</h3> <p>Traditional spicy taste.</p> </div> </div> 
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=387" onclick="openImage(this.src)">
-<div class="card-content">
-<h3>Chicken Tikka</h3>
-<p>Traditional spicy taste.</p>
-</div>
-</div>
+<div class="card"> <img src="https://images.unsplash.com/photo-1705174427925-744646e72117?q=80&w=387" onclick="openImage(this.src)"> <div class="card-content"> <h3>Butter Chicken</h3> <p>Creamy & rich flavor.</p> </div> </div> 
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1705174427925-744646e72117?q=80&w=387" onclick="openImage(this.src)">
-<div class="card-content">
-<h3>Butter Chicken</h3>
-<p>Creamy & rich flavor.</p>
-</div>
-</div>
+<div class="card"> <img src="https://media.istockphoto.com/id/1331941959/photo/cream-chicken-curry-with-flatbread-chapati-or-paratha.jpg?s=1024x1024&w=is&k=20&c=GhdinY61qpTsJBHwwQWv9yeqf6iPiGY0x85eIjAQ2Vo=" onclick="openImage(this.src)"> <div class="card-content"> <h3>Kali Mirch Chicken</h3> <p>Black pepper special.</p> </div> </div> 
 
-<div class="card">
-<img src="https://media.istockphoto.com/id/1331941959/photo/cream-chicken-curry-with-flatbread-chapati-or-paratha.jpg?s=1024x1024&w=is&k=20&c=GhdinY61qpTsJBHwwQWv9yeqf6iPiGY0x85eIjAQ2Vo=" onclick="openImage(this.src)">
-<div class="card-content">
-<h3>Kali Mirch Chicken</h3>
-<p>Black pepper special.</p>
-</div>
-</div>
+<div class="card"> <img src="https://media.istockphoto.com/id/1036884292/photo/chicken-drumsticks-in-barbecue-sauce.jpg?s=1024x1024&w=is&k=20&c=yNC2QCR9yxpmpk2-3GVcbmrZMh8UwNmzq8s99mZBsG0=" onclick="openImage(this.src)"> <div class="card-content"> <h3>Chicken Lollipop</h3> <p>Juicy & crispy delight.</p> </div> </div>
 
-<div class="card">
-<img src="https://media.istockphoto.com/id/1036884292/photo/chicken-drumsticks-in-barbecue-sauce.jpg?s=1024x1024&w=is&k=20&c=yNC2QCR9yxpmpk2-3GVcbmrZMh8UwNmzq8s99mZBsG0=" onclick="openImage(this.src)">
-<div class="card-content">
-<h3>Chicken Lollipop</h3>
-<p>Juicy & crispy delight.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://media.istockphoto.com/id/2164312347/photo/chicken-reshmi-kabab-or-chicken-malai-kabab-delicious-mughlai-cuisine-serve-with-mint-chutney.jpg?s=1024x1024&w=is&k=20&c=vaHQUeyhjLkRbmzZZ3KrWdMqfY3MjU57hsRlQoHR1Xc=" onclick="openImage(this.src)">
-<div class="card-content">
-<h3>Chicken Mughlai</h3>
-<p>Royal style recipe.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.pexels.com/photos/6896080/pexels-photo-6896080.jpeg" onclick="openImage(this.src)">
-<div class="card-content">
-<h3>Chicken Lemon</h3>
-<p>Fresh & tangy taste.</p>
-</div>
-</div>
-
-</section>
-
+<div class="card"> <img src="https://media.istockphoto.com/id/2164312347/photo/chicken-reshmi-kabab-or-chicken-malai-kabab-delicious-mughlai-cuisine-serve-with-mint-chutney.jpg?s=1024x1024&w=is&k=20&c=vaHQUeyhjLkRbmzZZ3KrWdMqfY3MjU57hsRlQoHR1Xc=" onclick="openImage(this.src)"> <div class="card-content"> <h3>Chicken Mughlai</h3> <p>Royal style recipe.</p> </div> </div> 
+ 
+<div class="card"> <img src="https://images.pexels.com/photos/6896080/pexels-photo-6896080.jpeg" onclick="openImage(this.src)"> <div class="card-content"> <h3>Chicken Lemon</h3> <p>Fresh & tangy taste.</p> </div> </div> </section>
 <footer>
 
 <a href="https://wa.me/917251996501" target="_blank" class="whatsapp">
 <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-<a href="https://wa.me/917251996501" target="_blank"
-style="
-position:fixed;
-bottom:20px;
-right:20px;
-width:60px;
-height:60px;
-background:#25D366;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-box-shadow:0 5px 15px rgba(0,0,0,0.4);
-">
-
-<i class="fab fa-whatsapp" style="color:white; font-size:30px;"></i>
-
-</a>
 </a>
 
 <a href="https://www.instagram.com/zoharzubair" target="_blank" class="instagram">
 <i class="fab fa-instagram"></i> Follow Us on Instagram
 </a>
 
-<p style="margin-top:15px;">© 2026 Zubair Zayka</p>
+<p>© 2026 Zubair Zayka</p>
 
 </footer>
 
-<!-- IMAGE MODAL -->
-<div id="imageModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:9999;">
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/917251996501" class="float-whatsapp" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
 
-<span onclick="closeImage()" style="position:absolute; top:20px; right:40px; font-size:40px; color:white; cursor:pointer;">&times;</span>
-
-<img id="modalImg" style="max-width:90%; max-height:90%; border-radius:15px;">
-
+<!-- Image Modal -->
+<div id="imageModal" class="modal">
+<span onclick="closeImage()" class="close">&times;</span>
+<img id="modalImg">
 </div>
 
-<script>
+<script src="script.js"></script>
 
-function openImage(src){
-document.getElementById("imageModal").style.display="flex";
-document.getElementById("modalImg").src=src;
-}
-
-function closeImage(){
-document.getElementById("imageModal").style.display="none";
-}
-
-/* SCROLL ANIMATION */
-const cards = document.querySelectorAll('.card');
-
-window.addEventListener('scroll',()=>{
-cards.forEach(card=>{
-const cardTop = card.getBoundingClientRect().top;
-if(cardTop < window.innerHeight - 100){
-card.classList.add('show');
-}
-});
-});
-
-</script>
-<!-- 
-<a href="https://wa.me/917251996501" class="float-whatsapp" target="_blank">
-<i class="fab fa-whatsapp"></i> -->
-</a>
 </body>
 </html>

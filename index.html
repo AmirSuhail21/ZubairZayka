@@ -174,17 +174,21 @@ margin-right:6px;
 <header>
 <h1>Zubair Zayka 🍽</h1>
 <nav>
-<a href="#">
-<i class="fas fa-house"></i> Home
-</a>
+    <div style="display:flex; gap:20px; align-items:center;">
 
-<a href="tel:7251996501">
-<i class="fas fa-phone"></i> Call
-</a>
+  <a href="#" style="color:white; text-decoration:none; display:flex; align-items:center; gap:5px;">
+    <i class="fas fa-home"></i> Home
+  </a>
 
-<a href="https://share.google/SOkN6jZuCGl8Ol0gN" target="_blank">
-<i class="fas fa-location-dot"></i> Location
-</a>
+  <a href="tel:7251996501" style="color:white; text-decoration:none; display:flex; align-items:center; gap:5px;">
+    <i class="fas fa-phone"></i> Call
+  </a>
+
+  <a href="#" style="color:white; text-decoration:none; display:flex; align-items:center; gap:5px;">
+    <i class="fas fa-map-marker-alt"></i> Location
+  </a>
+
+</div>
 </nav>
 </header>
 
@@ -287,6 +291,24 @@ margin-right:6px;
 
 <a href="https://wa.me/917251996501" target="_blank" class="whatsapp">
 <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+<a href="https://wa.me/917251996501" target="_blank"
+style="
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.4);
+">
+
+<i class="fab fa-whatsapp" style="color:white; font-size:30px;"></i>
+
+</a>
 </a>
 
 <a href="https://www.instagram.com/zoharzubair" target="_blank" class="instagram">
@@ -330,9 +352,9 @@ card.classList.add('show');
 });
 
 </script>
-
+<!-- 
 <a href="https://wa.me/917251996501" class="float-whatsapp" target="_blank">
-<i class="fab fa-whatsapp"></i>
+<i class="fab fa-whatsapp"></i> -->
 </a>
 </body>
 </html>

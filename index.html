@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-<style>
+<style >
 *{
 margin:0;
 padding:0;
@@ -146,6 +146,26 @@ background:#25D366;
 .instagram{
 background:#E1306C;
 }
+.float-whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:28px;
+padding:15px;
+border-radius:50%;
+box-shadow:0 5px 20px rgba(0,0,0,0.5);
+z-index:999;
+transition:0.3s;
+}
+
+.float-whatsapp:hover{
+transform:scale(1.1);
+}
+nav i{
+margin-right:6px;
+}
 </style>
 </head>
 
@@ -154,9 +174,17 @@ background:#E1306C;
 <header>
 <h1>Zubair Zayka 🍽</h1>
 <nav>
-<a href="#">Home</a>
-<a href="tel:7251996501">Call</a>
-<a href="https://share.google/SOkN6jZuCGl8Ol0gN" target="_blank">Location</a>
+<a href="#">
+<i class="fas fa-house"></i> Home
+</a>
+
+<a href="tel:7251996501">
+<i class="fas fa-phone"></i> Call
+</a>
+
+<a href="https://share.google/SOkN6jZuCGl8Ol0gN" target="_blank">
+<i class="fas fa-location-dot"></i> Location
+</a>
 </nav>
 </header>
 
@@ -279,6 +307,7 @@ background:#E1306C;
 </div>
 
 <script>
+
 function openImage(src){
 document.getElementById("imageModal").style.display="flex";
 document.getElementById("modalImg").src=src;
@@ -287,7 +316,23 @@ document.getElementById("modalImg").src=src;
 function closeImage(){
 document.getElementById("imageModal").style.display="none";
 }
+
+/* SCROLL ANIMATION */
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll',()=>{
+cards.forEach(card=>{
+const cardTop = card.getBoundingClientRect().top;
+if(cardTop < window.innerHeight - 100){
+card.classList.add('show');
+}
+});
+});
+
 </script>
 
+<a href="https://wa.me/917251996501" class="float-whatsapp" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
 </body>
 </html>

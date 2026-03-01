@@ -10,6 +10,46 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 
+
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBq-TdB4IVCtbYyj_uIDyEuSOvwtzxeSXw",
+  authDomain: "zubair-zayka.firebaseapp.com",
+  projectId: "zubair-zayka",
+  storageBucket: "zubair-zayka.firebasestorage.app",
+  messagingSenderId: "579967583292",
+  appId: "1:579967583292:web:b2ba2f9b9a4a2b5f07ef39",
+  measurementId: "G-FVT8NWR2R6"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+document.getElementById("orderForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const address = document.getElementById("address").value;
+  const dish = document.getElementById("dish").value;
+
+  await addDoc(collection(db, "orders"), {
+    name: name,
+    phone: phone,
+    address: address,
+    dish: dish,
+    status: "pending",
+    createdAt: serverTimestamp()
+  });
+
+  alert("Order Submitted Successfully!");
+  document.getElementById("orderForm").reset();
+});
+
+</script>
 <body>
 
 <header>
@@ -58,7 +98,16 @@
 <section class="delivery">
 <h2>Order for Home Delivery 🚚</h2>
 
-<form action="https://formsubmit.co/mannuraien3@gmail.com" method="POST">
+<form id="orderForm">
+
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="tel" id="phone" placeholder="Phone Number" required>
+<textarea id="address" placeholder="Delivery Address" required></textarea>
+<input type="text" id="dish" placeholder="Dish Name" required>
+
+<button type="submit">Place Order</button>
+
+</form>
 
 <!-- Hidden Settings -->
 <input type="hidden" name="_subject" value="New Order - Zubair Zayka">
@@ -101,6 +150,12 @@
 </div>
 
 <script src="script.js"></script>
+
+<script src="script.js"></script>
+
+<script type="module">
+  // Firebase code yaha
+</script>
 
 </body>
 </html>

@@ -196,3 +196,33 @@ font-size:40px;
 color:white;
 cursor:pointer;
 }
+
+.delivery{
+padding:40px 20px;
+text-align:center;
+}
+
+.delivery form{
+max-width:400px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.delivery input,
+.delivery textarea{
+padding:10px;
+border-radius:8px;
+border:none;
+}
+
+.delivery button{
+padding:12px;
+background:#ff4d4d;
+color:white;
+border:none;
+border-radius:25px;
+font-weight:bold;
+cursor:pointer;
+}
